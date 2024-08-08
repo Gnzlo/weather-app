@@ -6,11 +6,13 @@ import { MapService } from './services/map.service'; // Verifica la ruta
 import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MapViewerComponent } from './map-viewer-component/map-viewer-component.component';
+import { WeatherFactComponent } from "./weather-fact/weather-fact.component";
+import { BackgroundSwitcherComponent } from "./background-switcher/background-switcher.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, WeatherDetailsComponent, NavbarComponent, MapViewerComponent],
+  imports: [CommonModule, WeatherDetailsComponent, NavbarComponent, MapViewerComponent, WeatherFactComponent, BackgroundSwitcherComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

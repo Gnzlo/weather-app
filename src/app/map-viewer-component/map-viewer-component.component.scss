@@ -1,9 +1,7 @@
 #map {
-    height: 500px; /* Asegura que el contenedor del mapa ocupe todo el espacio disponible */
-    width: 500px;  /* Asegura que el contenedor del mapa ocupe todo el espacio disponible */
-    position: absolute;
-    display: flexbox;
-    border: solid 1px red;
+    height: 600px; /* Asegura que el contenedor del mapa ocupe todo el espacio disponible */
+    width: 700px;
+    margin:auto;
     overflow: hidden;
   }
   

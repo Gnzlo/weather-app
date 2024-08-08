@@ -13,6 +13,7 @@ export class MapViewerComponent implements OnInit, AfterViewInit {
   @ViewChild('mapContainer', { static: false }) 
   gmap: ElementRef | undefined;
   map: L.Map | undefined;
+  currentLayer: L.TileLayer | undefined;
 
   constructor(private mapService: MapService) {}
 
@@ -20,19 +21,34 @@ export class MapViewerComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.initializeMap();
+    this.changeLayer('temp_new'); // Capa por defecto
   }
 
   private initializeMap(): void {
     const mapOptions: L.MapOptions = {
-      center: [51.505, -0.09],
-      zoom: 5
+      center: [40.4168, -3.7038], // Coordenadas de Madrid, España
+      zoom: 5,
     };
 
     this.map = L.map(this.gmap?.nativeElement, mapOptions);
 
-    L.tileLayer(this.mapService.getTileLayerUrl(), {
+    // Añadimos un tile base, podría ser OpenStreetMap, por ejemplo:
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(this.map);
+  }
+
+  changeLayer(layerName: string): void {
+    if (this.currentLayer) {
+      this.map?.removeLayer(this.currentLayer);
+    }
+
+    this.currentLayer = L.tileLayer(this.mapService.getTileLayerUrl('temp_new'), {
+      maxZoom: 19,
+      attribution: '&copy; OpenWeatherMap contributors'
+    });
+
+    this.currentLayer.addTo(this.map!);
   }
 }
