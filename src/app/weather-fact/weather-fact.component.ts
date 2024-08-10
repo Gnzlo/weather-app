@@ -10,11 +10,15 @@ export class WeatherFactComponent implements OnInit {
   fact: string = '';
 
   private weatherFacts: string[] = [
-    "La Tierra ha aumentado su temperatura media global en aproximadamente 1 °C desde finales del siglo XIX.",
-    "El Ártico se está calentando al doble de la velocidad que el resto del planeta.",
-    "El nivel del mar ha subido unos 20 cm en los últimos 100 años debido al calentamiento global.",
-    "Las emisiones de dióxido de carbono son las más altas en 800,000 años.",
-    "Los fenómenos meteorológicos extremos son cada vez más frecuentes debido al cambio climático."
+    "The highest temperature ever recorded on Earth was 56.7 °C (134.1 °F) in Death Valley, California, in 1913.",
+    "The heaviest rainfall in a single day was recorded on Réunion Island in 1952, with 1,870 mm (73.6 inches) of precipitation.",
+    "The longest lightning strike ever recorded spanned 709 kilometers (441 miles), crossing three U.S. states in 2020.",
+    "The longest-lasting hurricane in history lasted 31 days in 1994 in the Pacific Ocean.",
+    "The longest-lasting hurricane in history lasted 31 days in 1994 in the Pacific Ocean.",
+    "The ozone layer protects Earth from the harmful ultraviolet rays of the sun.",
+    "In 1816, the 'Year Without a Summer' occurred due to the eruption of Mount Tambora, causing global cooling.",
+    "Cumulus clouds can reach heights of up to 20,000 meters (65,600 feet).",
+    "The driest place on Earth is the Atacama Desert in Chile, where some areas haven't received rain in hundreds of years.",
   ];
 
   ngOnInit(): void {

@@ -1,19 +1,27 @@
 .weather-fact {
-    background-color: #f0f8ff;
-    border-left: 5px solid #009688;
+    background-color: #fff;
     padding: 15px;
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    display: grid;
+    place-items: center;
+    width: 38rem;
+    text-align: center;
   
-    h3 {
+    .title-details {
       margin: 0 0 10px;
-      color: #009688;
+      color: #426cf5;
+      font-size: 1.5em;
+      font-family: "Oswald", sans-serif;
+      font-weight: 600;
     }
   
     p {
       margin: 0;
       color: #333;
-      font-size: 16px;
+      font-size: 20px;
+    }
+    .fact-p {
+      font-style: italic;
     }
   }
   

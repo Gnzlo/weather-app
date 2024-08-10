@@ -2,4 +2,13 @@
   display: grid;
   place-items: center;
   padding: 20px 10px;
+
+  p{
+    font-weight: 400;
+  } 
+
+  .temperature, .humidity, .description {
+    display:flex;
+  }
+
 }
