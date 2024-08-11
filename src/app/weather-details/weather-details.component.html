@@ -1,7 +1,7 @@
 <div class="weatherInfo" *ngIf="weatherData">
     <h1>{{ weatherData.name }}</h1>
-    <div class="temperature"><p>Temperature: </p> {{ weatherData.main.temp }} °C</div>
-    <div class="humidity"><p>Humidity: </p> {{ weatherData.main.humidity }} %</div>
-    <div class="description"><p>Description: </p> {{ weatherData.weather[0].description }}</div>
-  </div>
+    <div class="temperature"><p class="pr-4"><i class="fa-solid fa-temperature-three-quarters pr-4"></i>Temperature: </p> {{ weatherData.main.temp }} °C</div>
+    <div class="humidity"><p class="pr-4"><i class="fa-solid fa-droplet pr-4"></i>Humidity: </p> {{ weatherData.main.humidity }} %</div>
+    <div class="description"><p class="pr-4">Description: </p> {{ weatherData.weather[0].description }}</div>
+</div>
   
