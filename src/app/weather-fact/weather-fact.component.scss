@@ -4,7 +4,7 @@
     margin: 20px auto;
     display: grid;
     place-items: center;
-    width: 38rem;
+    width: 44rem;
     text-align: center;
   
     .title-details {
@@ -27,6 +27,6 @@
   
   @media only screen and (max-width: 600px) {
     .weather-fact {
-      width: 100vw;
+      width: 100%;
     }
   }
